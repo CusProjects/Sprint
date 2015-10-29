@@ -77,44 +77,17 @@
                                 </div>
                                 <div class="box-body">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered table-striped">
-                                            <thead>
-                                            <th>
-                                                ID
-                                            </th>
-                                            <th>
-                                                Name
-                                            </th>
-                                            <th>
-                                                State
-                                            </th>
-                                            <th>
-                                                Difficulty
-                                            </th>
-                                            <th>
-                                                Stack
-                                            </th>
-                                            </thead>
-                                            <tbody>
-                                                <tr ng-repeat="task in tasks">
-                                                    <td>
-                                                        {{task.id}}
-                                                    </td>
-                                                    <td>
+                                        <ul>
+                                            <li ng-repeat="stack in stacks">
+                                                {{stack.name}}
+                                                <ul>
+                                                    {{setTasks(stack.id)}}
+                                                    <li ng-repeat="task in tasks">
                                                         {{task.name}}
-                                                    </td>
-                                                    <td>
-                                                        {{task.state}}
-                                                    </td>
-                                                    <td>
-                                                        {{task.difficultyID}}
-                                                    </td>
-                                                    <td>
-                                                        {{task.stackID}}
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
