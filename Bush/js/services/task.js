@@ -17,7 +17,7 @@ app.factory('TaskData', ['$http', function ($http) {
 	TaskData.getStack = function () {
 		return $http.get(urlBase + 'stacks');
 	};
-
+	
 	TaskData.getProyect = function () {
 		return $http.get(urlBase + 'proyects');
 	};
